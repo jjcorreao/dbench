@@ -17,7 +17,7 @@ DBENCH_PATH=$HOME/dask_bench
 virtualenv --system-site-packages $DBENCH_PATH/.venv ; cd $DBENCH_PATH
 source $DBENCH_PATH/.venv/bin/activate
 wget http://portal.nersc.gov/project/mlhub/data_bench.csv -0 $DBENCH_PATH/data_bench.csv
-git clone foo
+git clone https://github.com/jjcorreao/dbench.git
 (time python $DBENCH_PATH/dbench/bench/regular/<test_code>) &> <test_code>.log
 ```
 
@@ -31,7 +31,7 @@ wget -0 $DBENCH_PATH/downloads/Anaconda2-4.0.0-Linux-x86_64.sh http://repo.conti
 bash $DBENCH_PATH/downloads/Anaconda2-4.0.0-Linux-x86_64.sh -b -p $DBENCH_PATH/.anaconda2
 export PATH=$DBENCH_PATH/.anaconda2/bin:$PATH ; cd $DBENCH_PATH
 wget http://portal.nersc.gov/project/mlhub/data_bench.csv -0 $DBENCH_PATH/data_bench.csv
-git clone foo
+git clone https://github.com/jjcorreao/dbench.git
 (time python $DBENCH_PATH/dbench/bench/dask/<test_code>) &> <test_code>.log
 ```
 
