@@ -37,7 +37,9 @@ git clone https://github.com/jjcorreao/dbench.git
 
 Results
 ---
-- Pandas: 0m6.776s (Dask) vs. 0m19.367s (regular)
+- Pandas: 0m6.776s (Dask) vs. 1m8.119s (regular)
 - Numpy: (Dask) vs. (regular)
 
-
+Comments
+---
+- I've found that the memory footprint of Dask is much bigger than what we get using "regular" applications, but it shows to be much faster, further runs and profiling has to be done to estimate by how much.
